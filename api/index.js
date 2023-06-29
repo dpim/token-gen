@@ -18,6 +18,9 @@ require('dotenv').config();
 const app = (0, express_1.default)();
 const { WEBFLOW_CLIENT_ID, WEBFLOW_SECRET, PORT, TOKEN_ENDPOINT_URL } = process.env;
 app.use(express_1.default.json());
+app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.send("Use the /token path!");
+}));
 app.get('/token', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { code } = req.query;
@@ -46,3 +49,4 @@ const getToken = (code) => __awaiter(void 0, void 0, void 0, function* () {
         throw error;
     }
 });
+module.exports = app;
