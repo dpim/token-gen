@@ -19,9 +19,13 @@ const app = (0, express_1.default)();
 const { WEBFLOW_CLIENT_ID, WEBFLOW_SECRET, PORT, TOKEN_ENDPOINT_URL } = process.env;
 app.use(express_1.default.json());
 app.get('/api', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=0, stale-while-revalidate');
     res.send("Use the /token path!");
 }));
 app.get('/api/token', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age-0, stale-while-revalidate');
     try {
         const { code } = req.query;
         const token = yield getToken(code);

@@ -9,10 +9,14 @@ const { WEBFLOW_CLIENT_ID, WEBFLOW_SECRET, PORT, TOKEN_ENDPOINT_URL } = process.
 app.use(express.json());
 
 app.get('/api', async (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=0, stale-while-revalidate');
   res.send("Use the /token path!");
 });
 
 app.get('/api/token', async (req: Request, res: Response) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age-0, stale-while-revalidate');
   try {
     const { code } = req.query as { code?: string };
     const token = await getToken(code);
