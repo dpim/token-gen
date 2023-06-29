@@ -8,11 +8,11 @@ const { WEBFLOW_CLIENT_ID, WEBFLOW_SECRET, PORT, TOKEN_ENDPOINT_URL } = process.
 
 app.use(express.json());
 
-app.get('/', async (req: Request, res: Response) => {
+app.get('/api', async (req: Request, res: Response) => {
   res.send("Use the /token path!");
 });
 
-app.get('/token', async (req: Request, res: Response) => {
+app.get('/api/token', async (req: Request, res: Response) => {
   try {
     const { code } = req.query as { code?: string };
     const token = await getToken(code);
