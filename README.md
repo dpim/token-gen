@@ -4,10 +4,13 @@ Token generator for minting personal user Webflow OAuth tokens
 ## Instructions
 1. Create a new Vercel project
 2. Import this repo
-  ![image](https://github.com/dpim/token-gen/assets/3460953/58b580e1-6d1f-4e8d-97e0-373acf366ea4)
+
+![image](https://github.com/dpim/token-gen/assets/3460953/45ae3ab1-c33d-4c16-9fc0-a5ca512d7549)
 
 3. Keep all settings as default
-![image](https://github.com/dpim/token-gen/assets/3460953/73ad1e53-6b09-428b-abb4-55b8ab67bc74)
+
+![image](https://github.com/dpim/token-gen/assets/3460953/19aca985-4390-41b0-b7c4-d63c08eace36)
+
 4. Add three environment variables
     - `WEBFLOW_CLIENT_ID` - your v1 App's client id
     - `WEBFLOW_SECRET` - your v1 App's client secret
