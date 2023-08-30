@@ -1,5 +1,5 @@
 # API Token Generator
-Token generator for testing
+Token generator for minting personal user Webflow OAuth tokens
 
 Instructions
 - Create a new Vercel project
